@@ -157,7 +157,7 @@ function repeatString(str, times) {
     return '';
   }
 
-  if(typeof times !== 'number' || times < 0) {
+  if (typeof times !== 'number' || times < 0) {
     return '';
   }
 
@@ -177,7 +177,7 @@ function repeatString(str, times) {
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeFirstOccurrences(str, value) {
-  if (typeof str !== 'string' || typeof value !== '') {
+  if (typeof str !== 'string' || typeof value !== 'string') {
     return '';
   }
 
