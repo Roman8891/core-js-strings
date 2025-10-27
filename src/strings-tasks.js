@@ -446,7 +446,7 @@ function invertCase(str) {
   let result = '';
   for (let i = 0; i < str.length; i++) {
     const cas = str[i];
-    result += cas === ch.toUpperCase() ? cas.toLowerCase() : cas.toUpperCase();
+    result += cas === cas.toUpperCase() ? cas.toLowerCase() : cas.toUpperCase();
   }
 
   return result;
