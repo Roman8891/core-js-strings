@@ -218,7 +218,7 @@ function sumOfCodes(str) {
   }
 
   let sum = 0;
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     sum += str.charCodeAt(i);
   }
 
@@ -238,8 +238,10 @@ function sumOfCodes(str) {
  */
 function startsWith(str, substr) {
   if (typeof str !== 'string' || typeof substr !== 'string') {
-    return str.startsWith(substr);
+    return false;
   }
+
+  return str.startsWith(substr);
 }
 
 /**
@@ -363,9 +365,9 @@ function countVowels(str) {
   const vow = 'aeiouyAEIOUY';
   let count = 0;
 
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     if (vow.includes(str[i])) {
-      count++;
+      count += 1;
     }
   }
 
@@ -444,7 +446,7 @@ function invertCase(str) {
   if (typeof str !== 'string') return '';
 
   let result = '';
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     const cas = str[i];
     result += cas === cas.toUpperCase() ? cas.toLowerCase() : cas.toUpperCase();
   }
@@ -482,7 +484,7 @@ function getStringFromTemplate(firstName, lastName) {
 function extractNameFromTemplate(value) {
   if (typeof value !== 'string') return '';
 
-  return value.replace(/^Hello,\s*|\!$/g, '');
+  return value.replace(/^Hello,\s*!$/g, '');
 }
 
 /**
